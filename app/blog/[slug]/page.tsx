@@ -149,7 +149,7 @@ function extractHeadings(html: string): string[] {
 
 import { BlogPost } from '@/lib/blog';
 
-export function extractQuickFacts(post: Partial<BlogPost>): { label: string; value: string }[] {
+function extractQuickFacts(post: Partial<BlogPost>): { label: string; value: string }[] {
   const content = (post.content || '').toLowerCase();
 
   // 1. Quality
@@ -189,6 +189,7 @@ export function extractQuickFacts(post: Partial<BlogPost>): { label: string; val
     { label: 'Events', value: eventsValue },
   ];
 }
+
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
 }

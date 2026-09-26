@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useMemo } from 'react';
+import type { ReactElement } from 'react';
 
 // ---------------------------------------------------------------------------
 // SVG FLAG COMPONENTS
@@ -239,7 +240,7 @@ const FlagPK = () => (
 // ---------------------------------------------------------------------------
 // COUNTRY LIST
 // ---------------------------------------------------------------------------
-type CountryEntry = { name: string; code: string; Flag: () => JSX.Element };
+type CountryEntry = { name: string; code: string; Flag: () => ReactElement };
 
 const COUNTRY_POOL: CountryEntry[] = [
   { name: 'Canada', code: 'CA', Flag: FlagCA },
